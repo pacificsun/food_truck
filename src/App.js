@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { fetchApiDataStart } from './redux/api/api.actions';
+// import FoodTrucks from './components/food-truck-card/food-truck-card.container';
+import MainView from './view/main-view';
 import './App.css';
 
-function App() {
+import Header from './layout/header/header.component';
+
+function App({ onFetchData }) {
+  useEffect(() => {
+    onFetchData();
+    console.log('here');
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <MainView />
+      {/* <FoodTrucks /> */}
     </div>
   );
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  onFetchData: () => dispatch(fetchApiDataStart())
+});
+
+export default connect(null, mapDispatchToProps)(App);
