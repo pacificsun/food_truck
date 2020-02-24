@@ -2,6 +2,7 @@ import React from 'react';
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from 'google-maps-react';
 import { Paper, Typography } from '@material-ui/core';
 import Container from './google-map.container';
+import { GOOGLE_API } from '../../config';
 class GoogleMapsContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -73,5 +74,5 @@ class GoogleMapsContainer extends React.Component {
   }
 }
 export default GoogleApiWrapper({
-  api: process.env.GOOGLE_API
+  api: GOOGLE_API
 })(Container(GoogleMapsContainer));
