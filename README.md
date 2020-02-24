@@ -21,13 +21,13 @@ For ui i used material ui beacause in react world it is becoming standard ui for
 
 # Trade off if you have more time what you have done
 
-The release date of project i'm currently working on(my current office link is https://skilltransfers.com/ under development) is this thursday so i only worked on this project is only saturday.If i have had more time surely more feature and more polished ui have achieved.
+The release date of project that i'm currently working on(my current office link is https://skilltransfers.com/ under development) is this thursday so i only worked on this project is saturday and few minutes here and there.If i have had more time surely more feature and more polished ui have achieved.
 
 # Link to other code you particularly proud of
 
-https://gitlab.com/skilltransfers/st_admin_material_ui.git
-
 https://github.com/pacificsun/thapa-clothing.git
+
+https://gitlab.com/skilltransfers/st_admin_material_ui.git
 
 # Link to your resume
 

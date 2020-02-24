@@ -30,7 +30,8 @@ function ManinView({ apiData: { data, loading, filterData, query } }) {
             <div
               style={{ position: 'relative', height: '100vh', marginTop: 20 }}
             >
-              <GoogleMap />
+              <GoogleMap data={data} /> // for showing latitude and longitude of
+              truck on maps
             </div>
           </Grid>
         </Grid>
