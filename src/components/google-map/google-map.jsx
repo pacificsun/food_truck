@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from 'google-maps-react';
 import { Paper, Typography } from '@material-ui/core';
-import Container from './google-map.container';
+// import Container from './google-map.container';
 import { GOOGLE_API } from '../../config';
 class GoogleMapsContainer extends React.Component {
   constructor(props) {
@@ -31,8 +31,8 @@ class GoogleMapsContainer extends React.Component {
     }
   };
   render() {
-    console.log(this.props.markerPoint);
-    const { markerPoint } = this.props;
+    // console.log(this.props.markerPoint);
+    // const { markerPoint } = this.props;
     return (
       <Map
         item
@@ -42,7 +42,7 @@ class GoogleMapsContainer extends React.Component {
         zoom={14}
         initialCenter={{ lat: 39.648209, lng: -75.711185 }}
       >
-        {markerPoint.map(point => {
+        {/* {markerPoint.map(point => {
           let latitude = point.latitude;
           let longitude = point.longitude;
           return (
@@ -53,8 +53,8 @@ class GoogleMapsContainer extends React.Component {
               name={'Changing Colors Garage'}
             />
           );
-        })}
-        {/* <MarkerPoint /> */}
+        })} */}
+
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -75,4 +75,4 @@ class GoogleMapsContainer extends React.Component {
 }
 export default GoogleApiWrapper({
   api: GOOGLE_API
-})(Container(GoogleMapsContainer));
+})(GoogleMapsContainer);
