@@ -19,9 +19,13 @@ here we have 5 main folder layout, components, redux, ui, view.
 
 For ui i used material ui beacause in react world it is becoming standard ui for fast paced development on top of that it built upon react so much helpful.
 
+In app.js i called action inside useEffect to fetch data, there i have footer and body. inside body i use redux-saga to pass state to components as props and code is simple and self explaining.
+
 # Trade off if you have more time what you have done
 
 The release date of project that i'm currently working on(my current office link is https://skilltransfers.com/ under development) is this thursday so i only worked on this project is saturday and few minutes here and there.If i have had more time surely more feature and more polished ui have achieved.
+
+for debugging and monitor the app i used redux devtools.
 
 # Link to other code you particularly proud of
 

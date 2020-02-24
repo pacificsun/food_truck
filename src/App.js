@@ -16,7 +16,6 @@ function App({ onFetchData }) {
     <div className="App">
       <Header />
       <MainView />
-      {/* <FoodTrucks /> */}
     </div>
   );
 }
