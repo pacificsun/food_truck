@@ -59,7 +59,7 @@ const FoodTruck = props => {
           </Typography>
         </CardContent>
       </div>
-      <Pagination count={10} variant="outlined" shape="rounded" />
+      {/* <Pagination count={10} variant="outlined" shape="rounded" /> */}
     </Card>
   );
 };
