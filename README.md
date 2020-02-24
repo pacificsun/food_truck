@@ -42,5 +42,6 @@ https://docs.google.com/document/d/14CO_bATD1XRxC5LQSQ5iIdXAfuOpnUoe7lCS1Dsob_I/
 I have implemented features like search by food items and shows them on cards.
 I'm running on tight schedule and doing over time because of release date.
 
-If i had more time, feature on google maps like current location, distance between user and nearest food truck and markers on googles map. all the truck location marker on maps show them according to the searched result.
+If i had more time, feature on google maps like current location, distance between user and nearest food truck and markers on googles map. all the truck location marker on maps show them according to the searched result and make card clickable to show more about a food truck to show more information about that particular truck for user to make decisionl
 also save data in mongodb or dynamodb and connect them to front via api also make user to login and give food ratings and notify users if new deal or offers are available.
+also we can make online food ordering and payment via stripe.
