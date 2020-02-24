@@ -27,10 +27,6 @@ function ManinView({ apiData: { data, loading, filterData, query } }) {
             />
           </Grid>
           <Grid item sm={4}>
-            {/* <Typography
-              component="div"
-              style={{ backgroundColor: '#cfe8fc', height: '100vh' }}
-            /> */}
             <div
               style={{ position: 'relative', height: '100vh', marginTop: 20 }}
             >
