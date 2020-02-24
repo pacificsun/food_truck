@@ -15,6 +15,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
+import { connect } from 'react-redux';
+import { searchTruck } from '../../redux/api/api.actions';
+
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1
@@ -77,7 +80,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function PrimarySearchAppBar() {
+const PrimarySearchAppBar = ({ onSearch }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -100,6 +103,11 @@ export default function PrimarySearchAppBar() {
 
   const handleMobileMenuOpen = event => {
     setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const handleSearchInput = event => {
+    const { value } = event.target;
+    onSearch(value);
   };
 
   const menuId = 'primary-search-account-menu';
@@ -129,14 +137,14 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
+      {/* <MenuItem>
+          <IconButton aria-label="show 4 new mails" color="inherit">
+            <Badge badgeContent={4} color="secondary">
+              <MailIcon />
+            </Badge>
+          </IconButton>
+          <p>Messages</p>
+        </MenuItem> */}
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
@@ -184,6 +192,7 @@ export default function PrimarySearchAppBar() {
                 root: classes.inputRoot,
                 input: classes.inputInput
               }}
+              onChange={handleSearchInput}
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
@@ -227,4 +236,8 @@ export default function PrimarySearchAppBar() {
       {renderMenu}
     </div>
   );
-}
+};
+const mapDispatchToProps = dispatch => ({
+  onSearch: input => dispatch(searchTruck(input))
+});
+export default connect(null, mapDispatchToProps)(PrimarySearchAppBar);

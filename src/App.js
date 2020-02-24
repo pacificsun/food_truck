@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchApiDataStart } from './redux/api/api.actions';
 // import FoodTrucks from './components/food-truck-card/food-truck-card.container';
-import MainView from './view/main-view';
+import MainView from './view/main-view.component';
 import './App.css';
 
 import Header from './layout/header/header.component';
